@@ -275,53 +275,54 @@ sub country
 
 __END__
 
-# Below is stub documentation for your module. You'd better edit it!
-
 =head1 NAME
 
-Country::Codes - Perl extension for blah blah blah
+Country::Codes - Perl extension for converting from a two-letter (ISO 3166-1 alpha-2) to the Country's full name.
 
 =head1 SYNOPSIS
 
   use Country::Codes;
-  blah blah blah
+  
+  $country_code = country($code);
 
 =head1 DESCRIPTION
 
-Stub documentation for Country::Codes, created by h2xs. It looks like the
-author of the extension was negligent enough to leave the stub
-unedited.
+Country::Codes, is used converting from a two-letter (ISO 3166-1 alpha-2) to the Country's full name.
 
-Blah blah blah.
+=head2 EXAMPLE USAGE
+
+  use Country::Codes;
+
+  print "What is the Country Code? ";
+
+  my $code = <STDIN>;
+  chop($code);
+
+  unless (country($code)) { print "This country does not exist yet :-("; exit;}
+  print "\nCountry Code is " . country($code) . " !";
 
 =head2 EXPORT
 
-None by default.
-
-
+@EXPORT = qw(country);
 
 =head1 SEE ALSO
 
-Mention other useful documentation such as the documentation of
-related modules or operating system documentation (such as man pages
-in UNIX), or any relevant external documentation such as RFCs or
-standards.
+Country codes are short alphabetic or numeric geographical codes (geocodes) developed to represent countries and 
+dependent areas, for use in data processing and communications. Several different systems have been developed to 
+do this. The best known of these is ISO 3166-1.
 
-If you have a mailing list set up for your module, mention it here.
-
-If you have a web site set up for your module, mention it here.
+http://en.wikipedia.org/wiki/Country_code
 
 =head1 AUTHOR
 
-A. U. Thor, E<lt>a.u.thor@a.galaxy.far.far.awayE<gt>
+Jason C. Rochon, E<lt>jason.c.rochon@gmail.comE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2013 by A. U. Thor
+Copyright (C) 2013 by Jason C. Rochon
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.14.2 or,
 at your option, any later version of Perl 5 you may have available.
-
 
 =cut

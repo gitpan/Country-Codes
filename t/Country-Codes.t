@@ -5,13 +5,8 @@
 
 # change 'tests => 1' to 'tests => last_test_to_print';
 
-use strict;
-use warnings;
-
-use Test;
-BEGIN { plan tests => 1 };
-use Country::Codes;
-ok(1); # If we made it this far, we're ok.
+use Test::More tests => 1;
+BEGIN { use_ok('Country::Codes') };
 
 #########################
 
