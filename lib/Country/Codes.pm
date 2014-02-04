@@ -1,7 +1,7 @@
 # Country::Codes.pm
 # Countries to be used for decoding to the full name of a country.
 # Jason C. Rochon
-# 08/02/2013
+# 01/29/2014
 
 package Country::Codes;
 use strict;
@@ -10,7 +10,7 @@ use warnings;
 our (@ISA, @EXPORT, $VERSION);
 
 use Exporter;
-$VERSION = 1.00;
+$VERSION = 1.01;
 @ISA = qw(Exporter);
 
 @EXPORT = qw(country);
@@ -315,7 +315,7 @@ http://en.wikipedia.org/wiki/Country_code
 
 =head1 AUTHOR
 
-Jason C. Rochon, E<lt>jason.c.rochon@gmail.comE<gt>
+Jason C. Rochon, E<lt>jcrochon@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
